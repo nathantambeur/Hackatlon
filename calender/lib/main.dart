@@ -90,7 +90,7 @@ class _StartPageState extends State<StartPage> {
     return Scaffold(
         bottomNavigationBar: DefaultTabController(
             initialIndex: 0,
-            length: 3,
+            length: 5,
             child: Scaffold(
               appBar: AppBar(
                 title: Text(dateFormat.format(date)),
@@ -101,6 +101,12 @@ class _StartPageState extends State<StartPage> {
                     ),
                     Tab(
                       icon: Icon(Icons.favorite),
+                    ),
+                    Tab(
+                      icon: Icon(Icons.assistant_navigation),
+                    ),
+                    Tab(
+                      icon: Icon(Icons.chat),
                     ),
                     Tab(
                       icon: Icon(Icons.account_circle),
@@ -159,6 +165,10 @@ class _StartPageState extends State<StartPage> {
                   Center(
                       child: Text(
                           "It's sunny here")), //use events list in a listvieuw to generate the list of event cards
+                  Center(
+                    child: Text("It's sunny here")),
+                  Center(
+                    child: Text("It's sunny here")),
                   Center(
                     child: Text("It's sunny here"),
                   ),
