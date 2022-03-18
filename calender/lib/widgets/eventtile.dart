@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
+import '../pages/options.dart';
+
 class EventCard extends StatefulWidget {
   const EventCard({Key? key}) : super(key: key);
 
@@ -12,7 +14,9 @@ class _EventCardState extends State<EventCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () {},
+        onTap: () {
+          MaterialPageRoute(builder: (_) => OptionsPage());
+        },
         child: GFCard(
           boxFit: BoxFit.cover,
           titlePosition: GFPosition.end,
@@ -25,7 +29,7 @@ class _EventCardState extends State<EventCard> {
             borderRadius: BorderRadius.circular(8.0),
           ),
           showOverlayImage: true,
-          imageOverlay: NetworkImage(
+          imageOverlay: const NetworkImage(
               'https://media.istockphoto.com/photos/man-speaking-at-a-business-conference-picture-id499517325?b=1&k=20&m=499517325&s=170667a&w=0&h=jMCaZov25c5VR1CP-4axUdJPEKSpBWbzzWAubQS3-oo='),
           title: GFListTile(
             description: Row(

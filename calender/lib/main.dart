@@ -158,7 +158,7 @@ class _StartPageState extends State<StartPage> {
                       )),
                   Center(
                       child: Text(
-                          "Favorites")), //use events list in a listvieuw to generate the list of event cards
+                          "It's sunny here")), //use events list in a listvieuw to generate the list of event cards
                   Center(
                     child: Text("It's sunny here"),
                   ),
