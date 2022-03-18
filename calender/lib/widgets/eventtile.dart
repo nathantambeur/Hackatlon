@@ -14,9 +14,14 @@ class _EventCardState extends State<EventCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () {
-          MaterialPageRoute(builder: (_) => OptionsPage());
-        },
+        onTap: () =>
+          Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) =>
+                                          OptionsPage()),
+                                )
+        ,
         child: GFCard(
           boxFit: BoxFit.cover,
           titlePosition: GFPosition.end,
