@@ -37,8 +37,13 @@ class _BuddyEventPageState extends State<BuddyEventPage> {
   }
 
   final List<Event> events = [
-    Event(id: "t1", title: "new Shoes", amount: 4, date: DateTime.now()),
-    Event(id: "t2", date: DateTime.now(), amount: 2, title: "BaseballGlove")
+    Event(
+        id: "t1", title: "COOK PASTA WITH ME", amount: 4, date: DateTime.now()),
+    Event(
+        id: "t2",
+        date: DateTime.now(),
+        amount: 2,
+        title: "Need Friend: make flutter app with friends")
   ];
 
   @override

@@ -5,6 +5,8 @@ import 'package:getwidget/getwidget.dart';
 // importing material design library
 
 class EventPage extends StatefulWidget {
+  final String name;
+  const EventPage({Key? key, required this.name}) : super(key: key);
   @override
   _EventPageState createState() => _EventPageState();
 }
@@ -23,21 +25,33 @@ class _EventPageState extends State<EventPage> {
         boxFit: BoxFit.cover,
         titlePosition: GFPosition.start,
         image: Image.network(
-          'https://media.istockphoto.com/photos/man-speaking-at-a-business-conference-picture-id499517325?b=1&k=20&m=499517325&s=170667a&w=0&h=jMCaZov25c5VR1CP-4axUdJPEKSpBWbzzWAubQS3-oo=',
+          'https://res.cloudinary.com/td-applicatiebeheer-ku-leuven/image/upload/w_800/v1597609115/kulag_dev/BuildingPhotoId-d8fecc4c-dc0d-43c2-8578-636cacca008b.jpg',
           height: MediaQuery.of(context).size.height * 0.2,
           width: MediaQuery.of(context).size.width,
           fit: BoxFit.cover,
         ),
         showImage: true,
-
+        title: GFListTile(
+          description: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [Text(widget.name)]),
+        ),
         content: Text(
-            "AT THE AFT HACKATLON : \n ITS EVEN MORE FUN If NO ONE KNOWS HOW TO CODE!"), //event explination
+            "This is hidden behind the great tree of time wery confusing idd"), //event explination
         buttonBar: GFButtonBar(
           children: <Widget>[
             ElevatedButton.icon(
               onPressed: () {},
               icon: Icon(Icons.follow_the_signs_rounded),
-              label: Text("Looking for a fiend"),
+              label: Text("Get help from a local"),
+              style: ElevatedButton.styleFrom(
+                textStyle: TextStyle(fontSize: 15),
+              ),
+            ),
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.location_city),
+              label: Text("Show google maps"),
               style: ElevatedButton.styleFrom(
                 textStyle: TextStyle(fontSize: 15),
               ),

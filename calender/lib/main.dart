@@ -55,7 +55,7 @@ class _StartPageState extends State<StartPage> {
     ],
     [
       'https://res.cloudinary.com/td-applicatiebeheer-ku-leuven/image/upload/w_800/v1597609115/kulag_dev/BuildingPhotoId-d8fecc4c-dc0d-43c2-8578-636cacca008b.jpg',
-      'TTI Thermotechnisch Instituut',
+      'Group T',
       'My name is Sarah and I am a New York City based Flutter developer. I help entrepreneurs & businesses figure out how to build scalable applications.\n\nWith over 7 years experience spanning across many industries from B2B to B2C, I live and breath Flutter.'
     ],
     [

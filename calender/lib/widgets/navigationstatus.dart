@@ -3,12 +3,13 @@ import 'package:flutter/rendering.dart';
 import 'package:getwidget/getwidget.dart';
 
 import '../pages/options.dart';
+import 'navigation_page.dart';
 
 class NavigationCard extends StatefulWidget {
-  final picture; 
+  final picture;
   final name;
   const NavigationCard({Key? key, this.picture, this.name}) : super(key: key);
-  
+
   @override
   _NavigationState createState() => _NavigationState();
 }
@@ -16,16 +17,11 @@ class NavigationCard extends StatefulWidget {
 class _NavigationState extends State<NavigationCard> {
   @override
   Widget build(BuildContext context) {
-    
     return GestureDetector(
-        onTap: () =>
-          Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (_) =>
-                                          OptionsPage()),
-                                )
-        ,
+        onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => NavigationPage()),
+            ),
         child: GFCard(
           boxFit: BoxFit.cover,
           titlePosition: GFPosition.end,
@@ -38,12 +34,11 @@ class _NavigationState extends State<NavigationCard> {
             borderRadius: BorderRadius.circular(8.0),
           ),
           showOverlayImage: true,
-          imageOverlay:  NetworkImage(widget.picture),
+          imageOverlay: NetworkImage(widget.picture),
           title: GFListTile(
             description: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
             ),
-
           ),
           content: Text(
             widget.name,
