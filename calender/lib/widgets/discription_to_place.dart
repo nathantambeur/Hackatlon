@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:getwidget/getwidget.dart';
 
+import '../Maps/maps.dart';
+
 // importing material design library
 
 class EventPage extends StatefulWidget {
@@ -49,7 +51,9 @@ class _EventPageState extends State<EventPage> {
               ),
             ),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                MapUtils.openMap(-3.823216, -38.481700);
+              },
               icon: Icon(Icons.location_city),
               label: Text("Show google maps"),
               style: ElevatedButton.styleFrom(

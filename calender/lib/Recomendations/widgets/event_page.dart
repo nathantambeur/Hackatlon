@@ -37,7 +37,7 @@ class _EventPageState extends State<EventPage> {
             ElevatedButton.icon(
               onPressed: () {},
               icon: Icon(Icons.follow_the_signs_rounded),
-              label: Text("Looking for a fiend"),
+              label: Text("Looking for a friend"),
               style: ElevatedButton.styleFrom(
                 textStyle: TextStyle(fontSize: 15),
               ),

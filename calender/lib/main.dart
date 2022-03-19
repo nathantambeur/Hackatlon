@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Calendar',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
+        primarySwatch: Colors.cyan,
       ),
       home: StartPage(),
     );
@@ -182,7 +182,7 @@ class _StartPageState extends State<StartPage> {
                           return EventCard(
                             picture1: events[index][0],
                             name1: events[index][1],
-                            schild1:events[index][2],
+                            schild1: events[index][2],
                           );
                         },
                         itemCount: events.length,
