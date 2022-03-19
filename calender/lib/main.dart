@@ -1,6 +1,7 @@
 // Copyright 2019 Aleksander Woźniak
 // SPDX-License-Identifier: Apache-2.0
 
+import 'package:calender/Chat/Chats.dart';
 import 'package:calender/Recomendations/main.dart';
 import 'package:calender/pages/options.dart';
 import 'package:calender/widgets/eventpage.dart';
@@ -248,9 +249,7 @@ class _StartPageState extends State<StartPage> {
                           ),
                         ],
                       )), //use events list in a listvieuw to generate the list of event cards
-                  Center(
-                      child: Text(
-                          "KWINTEN ZIJN SUPER CHAT MET VANNNE HAAR SUPER AI BOT")),
+                  NavigationPage(),
 
                   BuddyEventPage(),
                 ],

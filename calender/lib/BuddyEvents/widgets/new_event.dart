@@ -39,7 +39,7 @@ class _NewEventState extends State<NewEvent> {
           ),
           // ignore: deprecated_member_use
           FlatButton(
-              color: Colors.purple,
+              color: Colors.amber,
               onPressed: () {
                 submitdata();
               },
