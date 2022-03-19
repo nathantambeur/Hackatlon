@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:getwidget/getwidget.dart';
+
 // importing material design library
 
 class EventPage extends StatefulWidget {
@@ -9,7 +11,6 @@ class EventPage extends StatefulWidget {
 
 class _EventPageState extends State<EventPage> {
 // value set to false
-  bool _value = false;
 
 // App widget tree
   @override
@@ -18,41 +19,55 @@ class _EventPageState extends State<EventPage> {
       appBar: AppBar(
         title: Text('Event'),
       ),
-      body: SizedBox(
-        width: 400,
-        height: 400,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.amberAccent),
-                borderRadius: BorderRadius.circular(20),
-              ), //BoxDecoration
-
-              /** CheckboxListTile Widget **/
-              child: CheckboxListTile(
-                //TODO
-                // van deze checklist box tile eeen extrne wiget maken en hierin gewoon een Listview zetten die alle options als listtiles omzet
-                title: const Text('Show parties'),
-                subtitle: const Text('show TD\'s and fun promotions in events'),
-                secondary: const Icon(Icons.no_drinks),
-                autofocus: false,
-                activeColor: Colors.green,
-                checkColor: Colors.white,
-                selected: _value,
-                value: _value,
-                onChanged: (val) {
-                  setState(() {
-                    _value = val!;
-                  });
-                },
-              ), //CheckboxListTile
-            ), //Container
-          ), //Padding
-        ), //Center
-      ), //SizedBox
-      //Scaffold
+      body: GFCard(
+        boxFit: BoxFit.cover,
+        titlePosition: GFPosition.start,
+        image: Image.network(
+          'https://media.istockphoto.com/photos/man-speaking-at-a-business-conference-picture-id499517325?b=1&k=20&m=499517325&s=170667a&w=0&h=jMCaZov25c5VR1CP-4axUdJPEKSpBWbzzWAubQS3-oo=',
+          height: MediaQuery.of(context).size.height * 0.2,
+          width: MediaQuery.of(context).size.width,
+          fit: BoxFit.cover,
+        ),
+        showImage: true,
+        title: GFListTile(
+          avatar: GFAvatar(
+            backgroundImage: NetworkImage(
+                'https://www.kuleuven.be/toekomstigestudenten/openles/leuven/images/vtk-schild.png/image_preview'),
+          ),
+          titleText: 'Title',
+          subTitleText: 'VTK', //of wie het ook geeft
+        ),
+        content: Text(
+            "a very very fun explination about the event and life ect, blablalbababbalbalbalblablalbalbalablablbalbalbalbalbalba"), //event explination
+        buttonBar: GFButtonBar(
+          children: <Widget>[
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.follow_the_signs_rounded),
+              label: Text("Looking for a fiend"),
+              style: ElevatedButton.styleFrom(
+                textStyle: TextStyle(fontSize: 15),
+              ),
+            ),
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.social_distance),
+              label: Text("Social"),
+              style: ElevatedButton.styleFrom(
+                textStyle: TextStyle(fontSize: 15),
+              ),
+            ),
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.run_circle_outlined),
+              label: Text("Going Alone"),
+              style: ElevatedButton.styleFrom(
+                textStyle: TextStyle(fontSize: 15),
+              ),
+            ),
+          ],
+        ),
+      ), //Scaffold
     ); //MaterialApp
   }
 }

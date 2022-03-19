@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
 import '../pages/options.dart';
+import 'eventpage.dart';
 
 class EventCard extends StatefulWidget {
   const EventCard({Key? key}) : super(key: key);
@@ -14,14 +15,10 @@ class _EventCardState extends State<EventCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () =>
-          Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (_) =>
-                                          OptionsPage()),
-                                )
-        ,
+        onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => EventPage()),
+            ),
         child: GFCard(
           boxFit: BoxFit.cover,
           titlePosition: GFPosition.end,
