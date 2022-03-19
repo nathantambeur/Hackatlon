@@ -24,6 +24,15 @@ class BuddyEventPageState extends State<BuddyEventPage> {
         });
   }
 
+  void startAddNewEventSomwhereElse(ctx) {
+    //let a form apear form below
+    showModalBottomSheet(
+        context: ctx,
+        builder: (_) {
+          return NewEvent(addNewEventSomewhereElse); //wiget that pops up
+        });
+  }
+
   void addNewEvent(String title, double amount) {
     final trans = Event(
         id: DateTime.now().toString(),
@@ -36,7 +45,18 @@ class BuddyEventPageState extends State<BuddyEventPage> {
     return;
   }
 
-  final List<Event> events = [
+  void addNewEventSomewhereElse(String title, double amount) {
+    final trans = Event(
+        id: DateTime.now().toString(),
+        date: DateTime.now(),
+        amount: amount,
+        title: title);
+    events.add(trans);
+
+    return;
+  }
+
+  static List<Event> events = [
     Event(
         id: "t1", title: "COOK PASTA WITH ME", amount: 4, date: DateTime.now()),
     Event(

@@ -42,8 +42,8 @@ class _EventPageState extends State<EventPage> {
         buttonBar: GFButtonBar(
           children: <Widget>[
             ElevatedButton.icon(
-              onPressed:
-                  () {}, //=> BuddyEventPage().build().startAddNewEvent(context),
+              onPressed: () =>
+                  BuddyEventPageState().startAddNewEventSomwhereElse(context),
               icon: Icon(Icons.follow_the_signs_rounded),
               label: Text("Looking for a friend"),
               style: ElevatedButton.styleFrom(
