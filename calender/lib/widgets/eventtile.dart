@@ -5,8 +5,10 @@ import '../pages/options.dart';
 import 'eventpage.dart';
 
 class EventCard extends StatefulWidget {
-  const EventCard({Key? key}) : super(key: key);
-
+  final picture1; 
+  final name1;
+  final schild1;
+  const EventCard({Key? key, this.picture1, this.name1,this.schild1}) : super(key: key);
   @override
   _EventCardState createState() => _EventCardState();
 }
@@ -22,8 +24,7 @@ class _EventCardState extends State<EventCard> {
         child: GFCard(
           boxFit: BoxFit.cover,
           titlePosition: GFPosition.end,
-          image: Image.network(
-            'https://media.istockphoto.com/photos/man-speaking-at-a-business-conference-picture-id499517325?b=1&k=20&m=499517325&s=170667a&w=0&h=jMCaZov25c5VR1CP-4axUdJPEKSpBWbzzWAubQS3-oo=',
+          image: Image.network(widget.picture1,
             height: 300.0,
             width: double.infinity,
           ),
@@ -31,13 +32,12 @@ class _EventCardState extends State<EventCard> {
             borderRadius: BorderRadius.circular(8.0),
           ),
           showOverlayImage: true,
-          imageOverlay: const NetworkImage(
-              'https://media.istockphoto.com/photos/man-speaking-at-a-business-conference-picture-id499517325?b=1&k=20&m=499517325&s=170667a&w=0&h=jMCaZov25c5VR1CP-4axUdJPEKSpBWbzzWAubQS3-oo='),
+          imageOverlay: NetworkImage(widget.picture1),
           title: GFListTile(
             description: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Title", style: TextStyle(color: Colors.white)),
+                Text("", style: TextStyle(color: Colors.white)),
                 IconButton(
                   icon: CircleAvatar(
                       radius: 10,
@@ -58,15 +58,15 @@ class _EventCardState extends State<EventCard> {
             avatar: CircleAvatar(
               radius: 20,
               backgroundColor: Colors.transparent,
-              child: Image.network(
-                'https://www.kuleuven.be/toekomstigestudenten/openles/leuven/images/vtk-schild.png/image_preview',
+              child: Image.network(widget.schild1
+                ,
                 width: 30,
                 height: 30,
               ),
             ),
           ),
-          content: Text(
-            "Cantus party xxl fun",
+          content: Text(widget.name1
+            ,
             style: TextStyle(color: Colors.white),
           ),
           // buttonBar: GFButtonBar(
