@@ -32,7 +32,7 @@ class _NewEventState extends State<NewEvent> {
           TextField(
             keyboardType: TextInputType.number,
             controller: amountController,
-            decoration: InputDecoration(labelText: 'Amount'),
+            decoration: InputDecoration(labelText: 'Amount of Pers.'),
             onSubmitted: (_) {
               submitdata();
             },
