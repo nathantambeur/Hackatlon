@@ -12,4 +12,14 @@ class MapUtils {
       throw 'Could not open the map.';
     }
   }
+
+  static Future<void> openFB() async {
+    String googleUrl =
+        'https://www.facebook.com/groups/554441502012122/?multi_permalinks=612541386202133%2C609641603158778&notif_id=1581595208128167&notif_t=group_activity';
+    if (await canLaunch(googleUrl)) {
+      await launch(googleUrl);
+    } else {
+      throw 'Could not open the map.';
+    }
+  }
 }

@@ -1,6 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 import 'package:getwidget/getwidget.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import '../../Maps/maps.dart';
 
 // importing material design library
 
@@ -36,7 +41,9 @@ class _EventPageState extends State<EventPage> {
         buttonBar: GFButtonBar(
           children: <Widget>[
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () async {
+                MapUtils.openFB();
+              },
               icon: Icon(Icons.follow_the_signs_rounded),
               label: Text("Contact the poster"),
               style: ElevatedButton.styleFrom(

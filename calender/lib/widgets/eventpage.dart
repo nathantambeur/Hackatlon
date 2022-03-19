@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:getwidget/getwidget.dart';
 
+import "package:calender/BuddyEvents/main.dart";
 // importing material design library
 
 class EventPage extends StatefulWidget {
@@ -42,25 +42,10 @@ class _EventPageState extends State<EventPage> {
         buttonBar: GFButtonBar(
           children: <Widget>[
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed:
+                  () {}, //=> BuddyEventPage().build().startAddNewEvent(context),
               icon: Icon(Icons.follow_the_signs_rounded),
               label: Text("Looking for a friend"),
-              style: ElevatedButton.styleFrom(
-                textStyle: TextStyle(fontSize: 15),
-              ),
-            ),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: Icon(Icons.social_distance),
-              label: Text("Social"),
-              style: ElevatedButton.styleFrom(
-                textStyle: TextStyle(fontSize: 15),
-              ),
-            ),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: Icon(Icons.run_circle_outlined),
-              label: Text("Going Alone"),
               style: ElevatedButton.styleFrom(
                 textStyle: TextStyle(fontSize: 15),
               ),

@@ -43,7 +43,7 @@ class _NewEventState extends State<NewEvent> {
               onPressed: () {
                 submitdata();
               },
-              child: Text("Add Event"))
+              child: Text("Add Buddy Event"))
         ]),
       ),
     );

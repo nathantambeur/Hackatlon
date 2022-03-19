@@ -11,20 +11,20 @@ class BuddyEventPage extends StatefulWidget {
   const BuddyEventPage({
     Key? key,
   }) : super(key: key);
-  State<BuddyEventPage> createState() => _BuddyEventPageState();
+  State<BuddyEventPage> createState() => BuddyEventPageState();
 }
 
-class _BuddyEventPageState extends State<BuddyEventPage> {
+class BuddyEventPageState extends State<BuddyEventPage> {
   void startAddNewEvent(ctx) {
     //let a form apear form below
     showModalBottomSheet(
         context: ctx,
         builder: (_) {
-          return NewEvent(_addNewEvent); //wiget that pops up
+          return NewEvent(addNewEvent); //wiget that pops up
         });
   }
 
-  void _addNewEvent(String title, double amount) {
+  void addNewEvent(String title, double amount) {
     final trans = Event(
         id: DateTime.now().toString(),
         date: DateTime.now(),

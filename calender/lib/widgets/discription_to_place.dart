@@ -52,7 +52,7 @@ class _EventPageState extends State<EventPage> {
             ),
             ElevatedButton.icon(
               onPressed: () {
-                MapUtils.openMap(-3.823216, -38.481700);
+                MapUtils.openMap(50.8734216, 4.7077100);
               },
               icon: Icon(Icons.location_city),
               label: Text("Show google maps"),
