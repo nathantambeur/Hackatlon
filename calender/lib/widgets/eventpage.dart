@@ -38,28 +38,31 @@ class _EventPageState extends State<EventPage> {
           subTitleText: 'VTK', //of wie het ook geeft
         ),
         content: Text(
-            "a very very fun explination about the event and life ect, blablalbababbalbalbalblablalbalbalablablbalbalbalbalbalba"),
+            "a very very fun explination about the event and life ect, blablalbababbalbalbalblablalbalbalablablbalbalbalbalbalba"), //event explination
         buttonBar: GFButtonBar(
           children: <Widget>[
-            GFAvatar(
-              backgroundColor: GFColors.PRIMARY,
-              child: Icon(
-                Icons.facebook,
-                color: Colors.white,
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.follow_the_signs_rounded),
+              label: Text("Looking for a fiend"),
+              style: ElevatedButton.styleFrom(
+                textStyle: TextStyle(fontSize: 15),
               ),
             ),
-            GFAvatar(
-              backgroundColor: GFColors.SECONDARY,
-              child: Icon(
-                Icons.search,
-                color: Colors.white,
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.social_distance),
+              label: Text("Social"),
+              style: ElevatedButton.styleFrom(
+                textStyle: TextStyle(fontSize: 15),
               ),
             ),
-            GFAvatar(
-              backgroundColor: GFColors.SUCCESS,
-              child: Icon(
-                Icons.facebook,
-                color: Colors.white,
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.run_circle_outlined),
+              label: Text("Going Alone"),
+              style: ElevatedButton.styleFrom(
+                textStyle: TextStyle(fontSize: 15),
               ),
             ),
           ],
