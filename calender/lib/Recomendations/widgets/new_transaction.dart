@@ -28,6 +28,9 @@ class _NewTransactionState extends State<NewTransaction> {
           TextField(
             controller: titleController,
             decoration: InputDecoration(labelText: 'Title'),
+            onSubmitted: (_) {
+              submitdata();
+            },
           ),
           TextField(
             controller: amountController,
